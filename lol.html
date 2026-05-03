@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TechFix Solutions - خطة عمل المؤسسة</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080b12;--panel:#111827;--card:#151c2e;--soft:#1d2840;--primary:#7c5cff;--primary2:#00d4ff;--text:#f8fafc;--muted:#cbd5e1;--border:rgba(255,255,255,.10);--shadow:0 22px 70px rgba(0,0,0,.45)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;font-family:'Cairo',system-ui,sans-serif;background:radial-gradient(circle at 10% 0%,rgba(124,92,255,.22),transparent 34%),radial-gradient(circle at 90% 10%,rgba(0,212,255,.18),transparent 30%),var(--bg);color:var(--text);direction:rtl;overflow-x:hidden}.layout{display:grid;grid-template-columns:310px 1fr;min-height:100vh}.sidebar{position:sticky;top:0;height:100vh;overflow:auto;padding:24px 18px;background:rgba(17,24,39,.78);backdrop-filter:blur(14px);border-left:1px solid var(--border);box-shadow:var(--shadow);animation:slideSide .75s ease both}.brand{padding:18px;border:1px solid var(--border);border-radius:22px;background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(0,212,255,.08));margin-bottom:18px}.brand h1{font-size:1.2rem;margin:0 0 8px;color:#fff}.brand p{margin:0;color:var(--muted);font-size:.86rem}.nav{display:flex;flex-direction:column;gap:9px}.nav label{color:var(--muted);text-decoration:none;padding:11px 12px;border:1px solid transparent;border-radius:16px;background:rgba(255,255,255,.03);transition:.25s ease;display:flex;gap:10px;align-items:center;font-size:.9rem}.nav label span{direction:ltr;min-width:38px;text-align:center;padding:2px 8px;border-radius:99px;background:rgba(124,92,255,.18);color:#fff}.nav label:hover{transform:translateX(-5px);border-color:rgba(124,92,255,.55);background:linear-gradient(135deg,rgba(124,92,255,.20),rgba(0,212,255,.08));color:#fff}.content{padding:34px;max-width:1280px;width:100%;margin:0 auto}.hero{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:28px;background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(0,212,255,.12)),rgba(21,28,46,.75);padding:32px;margin-bottom:24px;box-shadow:var(--shadow);animation:fadeUp .65s ease both}.hero:after{content:"";position:absolute;inset:-80px auto auto -80px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.10);filter:blur(20px);animation:floatGlow 5s ease-in-out infinite}.hero h1{margin:0;font-size:2.1rem}.hero p{margin:10px 0 0;color:var(--muted)}.section-card{display:none;position:relative;overflow:hidden;border:1px solid var(--border);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));box-shadow:0 18px 55px rgba(0,0,0,.26);padding:26px;margin-bottom:22px;animation:fadeUp .65s ease both;animation-delay:calc(var(--delay)*.045s);transition:transform .25s ease,border-color .25s ease}.section-card:hover{transform:translateY(-3px);border-color:rgba(124,92,255,.55)}.section-card:before{content:"";position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--primary2));opacity:.9}h2{font-size:1.55rem;margin:0 0 16px;color:#fff;border-bottom:1px solid var(--border);padding-bottom:12px}p{line-height:1.95;margin:9px 0;color:#eef2ff}.subhead{font-weight:800;color:#fff;margin-top:18px;background:rgba(124,92,255,.12);border:1px solid rgba(124,92,255,.22);padding:10px 14px;border-radius:14px}.bullet,.numbered{padding:9px 14px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06);border-radius:13px}.table-wrap{width:100%;overflow:auto;border-radius:18px;border:1px solid var(--border);margin:16px 0;background:rgba(8,11,18,.55)}table{width:100%;border-collapse:collapse;min-width:720px}th,td{border-bottom:1px solid var(--border);border-left:1px solid var(--border);padding:13px 12px;vertical-align:middle;text-align:center;line-height:1.7}th{background:linear-gradient(135deg,rgba(124,92,255,.28),rgba(0,212,255,.12));color:#fff;font-weight:800}tr{transition:.2s ease}tr:hover td{background:rgba(124,92,255,.10)}td{color:#edf2f7}.top-btn{position:fixed;left:22px;bottom:22px;background:linear-gradient(135deg,var(--primary),var(--primary2));color:white;text-decoration:none;padding:12px 16px;border-radius:999px;box-shadow:0 14px 35px rgba(0,0,0,.35);font-weight:800;z-index:9}@keyframes fadeUp{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}@keyframes slideSide{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}@keyframes floatGlow{0%,100%{transform:translate(0,0)}50%{transform:translate(35px,35px)}}
+.page-radio{position:absolute;opacity:0;pointer-events:none}
+.content{height:100vh;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:var(--primary) rgba(255,255,255,.08)}
+.sidebar{scrollbar-width:thin;scrollbar-color:var(--primary2) rgba(255,255,255,.08)}
+.content::-webkit-scrollbar,.sidebar::-webkit-scrollbar,.table-wrap::-webkit-scrollbar{width:11px;height:11px}
+.content::-webkit-scrollbar-track,.sidebar::-webkit-scrollbar-track,.table-wrap::-webkit-scrollbar-track{background:rgba(255,255,255,.06);border-radius:999px}
+.content::-webkit-scrollbar-thumb,.sidebar::-webkit-scrollbar-thumb,.table-wrap::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--primary),var(--primary2));border-radius:999px;border:2px solid rgba(8,11,18,.95)}
+.content::-webkit-scrollbar-thumb:hover,.sidebar::-webkit-scrollbar-thumb:hover,.table-wrap::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--primary2),var(--primary))}
+#page0:checked ~ .layout .content #sec0,#page1:checked ~ .layout .content #sec1,#page2:checked ~ .layout .content #sec2,#page3:checked ~ .layout .content #sec3,#page4:checked ~ .layout .content #sec4,#page5:checked ~ .layout .content #sec5,#page6:checked ~ .layout .content #sec6,#page7:checked ~ .layout .content #sec7,#page8:checked ~ .layout .content #sec8,#page9:checked ~ .layout .content #sec9,#page10:checked ~ .layout .content #sec10,#page11:checked ~ .layout .content #sec11,#page12:checked ~ .layout .content #sec12,#page13:checked ~ .layout .content #sec13,#page14:checked ~ .layout .content #sec14,#page15:checked ~ .layout .content #sec15{display:block}
+#page0:checked ~ .layout .sidebar label[for="page0"],#page1:checked ~ .layout .sidebar label[for="page1"],#page2:checked ~ .layout .sidebar label[for="page2"],#page3:checked ~ .layout .sidebar label[for="page3"],#page4:checked ~ .layout .sidebar label[for="page4"],#page5:checked ~ .layout .sidebar label[for="page5"],#page6:checked ~ .layout .sidebar label[for="page6"],#page7:checked ~ .layout .sidebar label[for="page7"],#page8:checked ~ .layout .sidebar label[for="page8"],#page9:checked ~ .layout .sidebar label[for="page9"],#page10:checked ~ .layout .sidebar label[for="page10"],#page11:checked ~ .layout .sidebar label[for="page11"],#page12:checked ~ .layout .sidebar label[for="page12"],#page13:checked ~ .layout .sidebar label[for="page13"],#page14:checked ~ .layout .sidebar label[for="page14"],#page15:checked ~ .layout .sidebar label[for="page15"]{background:linear-gradient(135deg,var(--primary),rgba(0,212,255,.55));color:#fff;border-color:rgba(255,255,255,.28);box-shadow:0 12px 28px rgba(124,92,255,.22);transform:translateX(-5px)}
+#page0:checked ~ .layout .sidebar label[for="page0"] span,#page1:checked ~ .layout .sidebar label[for="page1"] span,#page2:checked ~ .layout .sidebar label[for="page2"] span,#page3:checked ~ .layout .sidebar label[for="page3"] span,#page4:checked ~ .layout .sidebar label[for="page4"] span,#page5:checked ~ .layout .sidebar label[for="page5"] span,#page6:checked ~ .layout .sidebar label[for="page6"] span,#page7:checked ~ .layout .sidebar label[for="page7"] span,#page8:checked ~ .layout .sidebar label[for="page8"] span,#page9:checked ~ .layout .sidebar label[for="page9"] span,#page10:checked ~ .layout .sidebar label[for="page10"] span,#page11:checked ~ .layout .sidebar label[for="page11"] span,#page12:checked ~ .layout .sidebar label[for="page12"] span,#page13:checked ~ .layout .sidebar label[for="page13"] span,#page14:checked ~ .layout .sidebar label[for="page14"] span,#page15:checked ~ .layout .sidebar label[for="page15"] span{background:rgba(255,255,255,.22)}
+
+/* Smooth premium animations */
+.section-card{will-change:transform,opacity;transform-origin:top center}
+.section-card h2,.section-card p,.section-card .table-wrap{animation:softReveal .55s cubic-bezier(.2,.8,.2,1) both}
+.section-card h2{animation-delay:.03s}.section-card p{animation-delay:.08s}.section-card .table-wrap{animation-delay:.13s}
+@keyframes softReveal{from{opacity:0;transform:translateY(14px);filter:blur(3px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
+.nav label{position:relative;overflow:hidden}
+.nav label:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.16),transparent);transform:translateX(120%);transition:.65s ease}
+.nav label:hover:before{transform:translateX(-120%)}
+.top-btn{border:0;display:none;align-items:center;gap:7px;cursor:pointer;animation:topPulse 2.2s ease-in-out infinite;transition:transform .25s ease,opacity .25s ease,box-shadow .25s ease}
+.top-btn.show{display:inline-flex}
+.top-btn:hover{transform:translateY(-5px) scale(1.04);box-shadow:0 18px 45px rgba(124,92,255,.38)}
+@keyframes topPulse{0%,100%{box-shadow:0 14px 35px rgba(0,0,0,.35),0 0 0 rgba(124,92,255,0)}50%{box-shadow:0 14px 35px rgba(0,0,0,.35),0 0 22px rgba(124,92,255,.45)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+@media(max-width:900px){.layout{display:block}.sidebar{position:relative;height:auto;max-height:45vh}.content{padding:18px;height:auto;min-height:55vh;overflow:visible}.hero h1{font-size:1.55rem}table{min-width:650px}}
+</style>
+</head>
+<body>
+<input class="page-radio" type="radio" name="page" id="page0" checked>
+<input class="page-radio" type="radio" name="page" id="page1" >
+<input class="page-radio" type="radio" name="page" id="page2" >
+<input class="page-radio" type="radio" name="page" id="page3" >
+<input class="page-radio" type="radio" name="page" id="page4" >
+<input class="page-radio" type="radio" name="page" id="page5" >
+<input class="page-radio" type="radio" name="page" id="page6" >
+<input class="page-radio" type="radio" name="page" id="page7" >
+<input class="page-radio" type="radio" name="page" id="page8" >
+<input class="page-radio" type="radio" name="page" id="page9" >
+<input class="page-radio" type="radio" name="page" id="page10" >
+<input class="page-radio" type="radio" name="page" id="page11" >
+<input class="page-radio" type="radio" name="page" id="page12" >
+<input class="page-radio" type="radio" name="page" id="page13" >
+<input class="page-radio" type="radio" name="page" id="page14" >
+<input class="page-radio" type="radio" name="page" id="page15" >
+
+<div class="layout">
+<aside class="sidebar" id="top">
+<div class="brand"><h1>TechFix Solutions</h1><p>ملف خطة العمل.</p></div>
+<nav class="nav"><label for="page0"><span>01</span>الغلاف والمعلومات الأساسية</label>
+<label for="page1"><span>02</span>الخلاصة التنفيذية Executive Summary</label>
+<label for="page2"><span>03</span>وصف فكرة المؤسسة:</label>
+<label for="page3"><span>04</span>وصف السوق:</label>
+<label for="page4"><span>05</span>اعتبارات العمل اللائق:</label>
+<label for="page5"><span>06</span>خطّة التسويق – السعر (Price)</label>
+<label for="page6"><span>07</span>خطّة التسويق – المكان (Place)</label>
+<label for="page7"><span>08</span>الشكل القانوني للمؤسسة (Legal Form)</label>
+<label for="page8"><span>09</span>طاقم العمل (Organization and Staff)</label>
+<label for="page9"><span>10</span>رأسمال البدء (Start-up Capital)</label>
+<label for="page10"><span>11</span>مصادر رأسمال البدء</label>
+<label for="page11"><span>12</span>معلومات عن مصادر التمويل</label>
+<label for="page12"><span>13</span>خدمة القروض (Debt Service) – الإجمالي الشهري:</label>
+<label for="page13"><span>14</span>التقدير الشهري للربح الصافي (Monthly Estimation of Net Profit)</label>
+<label for="page14"><span>15</span>خطّة التدفّق النقدي الشهري (Monthly Cash Flow Plan)</label>
+<label for="page15"><span>16</span>الميزانية العمومية التقديرية (Estimated Balance Sheet)</label>
+</nav>
+</aside>
+<main class="content">
+<div class="hero"><h1>نموذج خطة عمل المؤسسة</h1><p>Standard Business Plan — جميع النصوص والجداول مأخوذة من ملف Word المرفق.</p></div>
+<section class="section-card" id="sec0" style="--delay:0">
+<h2>الغلاف والمعلومات الأساسية</h2>
+<p>نموذج خطة عمل المؤسسة</p>
+<p>Standard Business Plan</p>
+<p>إعـداد: أحمد بركات و هادي أبو بكر و رائد خليلي و وائل جودلله</p>
+<p>التاريخ: 01 / 01 / 2026</p>
+<p class="subhead">تواريخ الخطة المعتمدة منطقيًا</p>
+<p>بداية المشروع المخطط لها: 01 / 01 / 2026</p>
+<p>نهاية السنة المالية الأولى: 31 / 12 / 2026</p>
+<p>فترة القرض العائلي: من 01 / 01 / 2026 إلى 31 / 12 / 2026</p>
+<p>فترة القرض البنكي: من 01 / 01 / 2026 إلى 31 / 12 / 2027</p>
+</section>
+<section class="section-card" id="sec1" style="--delay:1">
+<h2>الخلاصة التنفيذية Executive Summary</h2>
+<p class="subhead">الخلاصة التنفيذية Executive Summary</p>
+<p>اسم المؤسسة: TechFix Solutions</p>
+<p>الشكل القانوني للمؤسسة: مؤسسة فردية</p>
+<p>عنــــوان المؤسسة: رام الله – فلسطين</p>
+<p class="subhead">الهاتف: 00059XXXXXXX البريد الإلكتروني: techfix@gmail.com:</p>
+<p>نوع المؤسسة:
+☐ تصنيعية
+☑ خدمات
+☐ بيع بالجملة
+☐ بيع بالتجزئة</p>
+<p class="subhead">وصف موجز لفكرة المؤسسة:</p>
+<p>مؤسسة TechFix Solutions هي مشروع متخصص في تقديم خدمات فحص وتشخيص أعطال السيارات باستخدام تقنيات حديثة مثل أنظمة OBD2، بالإضافة إلى توفير تقارير مفصلة تساعد أصحاب السيارات على فهم الأعطال وإصلاحها بسهولة.</p>
+<p class="subhead">السلع أو الخدمات التي ستوفرها المؤسسة:</p>
+<p>فحص أعطال السيارات إلكترونيًا</p>
+<p>قراءة بيانات السيارة (Live Data)</p>
+<p>تقديم تقارير مفصلة عن حالة السيارة</p>
+<p>إرشادات لإصلاح الأعطال</p>
+<p>خدمة استشارة فنية للسيارات</p>
+<p class="subhead">زبائن المؤسسة:</p>
+<p>أصحاب السيارات الخاصة</p>
+<p>ورش تصليح السيارات</p>
+<p>شركات النقل</p>
+<p>السائقين المهنيين (تكسي، توصيل، إلخ)</p>
+<p class="subhead">المالك (المالكون):</p>
+<p>الاسم: أحمد بركات و هادي أبو بكر و رائد خليلي و وائل جودلله</p>
+<p>العنوان: رام الله – فلسطين</p>
+<p>المؤهلات: طلاب برمجة و تصميم صفحات ويب</p>
+<p>الوظيفة في المؤسسة: المدير العام / مطور النظام</p>
+<p class="subhead">الخبرة ذات الصلة:</p>
+<p>خبرة في برمجة المواقع والتطبيقات (Python, JavaScript, React)</p>
+<p>معرفة بأنظمة فحص السيارات (OBD2)</p>
+<p>خبرة في تطوير مشاريع تقنية</p>
+<p class="subhead">عدد الوظائف التي سيتم استحداثها:</p>
+<p>3 وظائف</p>
+<p class="subhead">رأس مال البدء: (Start-up Capital)</p>
+<p>الاستثمار:
+أجهزة فحص سيارات + حواسيب + تطوير موقع إلكتروني</p>
+<p>رأس المال العامل:
+تكاليف تشغيل (إنترنت، كهرباء، تسويق، صيانة)</p>
+<p class="subhead">المجموع:</p>
+<p>10,000 شيكل تقريبًا</p>
+<p>مصدر رأس المال: (Source of Capital)</p>
+<p>المُدخرات الخاصة:
+5,000 شيكل</p>
+<p>الشريك/الشركاء:
+لا يوجد حاليًا</p>
+<p class="subhead">القرض العائلي:
+2,000 شيكل</p>
+<p class="subhead">القرض المصرفي:
+3,000 شيكل</p>
+</section>
+<section class="section-card" id="sec2" style="--delay:2">
+<h2>وصف فكرة المؤسسة:</h2>
+<p class="subhead">وصف فكرة المؤسسة:</p>
+<p>تقوم فكرة المؤسسة على إنشاء مشروع متخصص في فحص وتشخيص أعطال السيارات باستخدام تقنيات حديثة مثل أجهزة OBD2، بالإضافة إلى تطوير منصة إلكترونية تساعد أصحاب السيارات على معرفة حالة مركباتهم بشكل دقيق.</p>
+<p>تستهدف المؤسسة تلبية حاجة واضحة لدى أصحاب السيارات الذين يواجهون صعوبة في فهم أعطال سياراتهم أو يتعرضون للاستغلال بسبب نقص المعرفة التقنية. لذلك تقدم المؤسسة خدمات فحص دقيقة، تقارير مفصلة، وإرشادات للإصلاح بطريقة سهلة ومفهومة.</p>
+<p class="subhead">الزبائن المستهدفون هم:</p>
+<p>أصحاب السيارات الخاصة</p>
+<p>السائقون المهنيون (تكسي، توصيل)</p>
+<p>ورش تصليح السيارات</p>
+<p class="subhead">نوع الخدمات المقدمة يشمل:</p>
+<p>فحص الأعطال إلكترونيًا</p>
+<p>قراءة بيانات السيارة المباشرة (Live Data)</p>
+<p>تقديم تقارير وتشخيص واضح</p>
+<p>إرشادات لإصلاح الأعطا</p>
+<p class="subhead">أما بالنسبة للوصول إلى الزبائن، فسيتم من خلال:</p>
+<p>موقع إلكتروني خاص بالمؤسسة</p>
+<p>وسائل التواصل الاجتماعي</p>
+<p>التعاون مع ورش تصليح السيارات</p>
+<p>الإعلان المحلي</p>
+</section>
+<section class="section-card" id="sec3" style="--delay:3">
+<h2>وصف السوق:</h2>
+<p class="subhead">وصف السوق:</p>
+<p>تعمل المؤسسة في السوق المحلي في محافظة سلفيت ورام الله، مع إمكانية التوسع لاحقًا إلى باقي مناطق فلسطين.</p>
+<p>يتكون السوق من عدد كبير من أصحاب السيارات، حيث يزداد الطلب على خدمات فحص الأعطال بسبب زيادة عدد المركبات واعتمادها على الأنظمة الإلكترونية الحديثة.</p>
+<p>نوع الزبائن يشمل الأفراد والشركات الصغيرة (مثل شركات النقل والتوصيل). ويُعتبر السوق كبيرًا نسبيًا وقابلًا للنمو، خاصة مع قلة الخدمات التقنية المتطورة في هذا المجال.</p>
+<p>المنافسون هم ورش تصليح السيارات التقليدية التي تقدم خدمات الفحص، لكنها غالبًا تعتمد على الخبرة اليدوية ولا تقدم تقارير دقيقة أو رقمية مفصلة</p>
+<p class="subhead">تتميز المؤسسة الجديدة بما يلي:</p>
+<p>ستخدام تقنيات حديثة</p>
+<p>تقديم تقارير واضحة ومفصلة</p>
+<p>توفير خدمة رقمية عبر الإنترنت</p>
+<p>الشفافية في تشخيص الأعطال</p>
+<p>من المتوقع أن تحصل المؤسسة في البداية على حصة صغيرة من السوق (حوالي 5% إلى 10%)، مع إمكانية زيادتها تدريجيًا مع انتشار الخدمة وزيادة ثقة العملاء</p>
+</section>
+<section class="section-card" id="sec4" style="--delay:4">
+<h2>اعتبارات العمل اللائق:</h2>
+<p class="subhead">اعتبارات العمل اللائق:</p>
+<p>تحرص المؤسسة على تطبيق مبادئ العمل اللائق من خلال توفير بيئة عمل آمنة ومحترمة لجميع الموظفين دون تمييز</p>
+<p class="subhead">فيما يتعلق بسياسة التوظيف:</p>
+<p>تلتزم المؤسسة بتوفير فرص عمل متساوية للرجال والنساء.</p>
+<p>تشجع على توظيف النساء في المجالات الإدارية والتقنية.</p>
+<p>تدعم توظيف الأشخاص ذوي الاحتياجات الخاصة من خلال توفير بيئة عمل مناسبة لهم</p>
+<p class="subhead">أما من ناحية ظروف العمل:</p>
+<p>توفير بيئة عمل آمنة وصحية داخل مكان العمل.</p>
+<p>الالتزام بساعات عمل مناسبة وعدم استغلال الموظفين.</p>
+<p>تقديم أجور عادلة تتناسب مع الجهد والخبرة.</p>
+<p>احترام حقوق العاملين وتوفير التأمينات حسب الإمكانيات</p>
+<p class="subhead">الاعتبارات البيئية:</p>
+<p class="numbered">1- تأثير السلع والخدمات التي ستوفرها المؤسسة على البيئة (مخرجات المؤسسة):</p>
+<p>تُعتبر خدمات المؤسسة ذات تأثير بيئي منخفض، حيث تركز على الفحص والتشخيص الإلكتروني بدلاً من التدخلات الميكانيكية الثقيلة.</p>
+<p class="subhead">كما تساهم المؤسسة بشكل غير مباشر في حماية البيئة من خلال:</p>
+<p>الكشف المبكر عن أعطال السيارات التي قد تسبب تلوثًا (مثل زيادة انبعاثات العادم).</p>
+<p>تحسين كفاءة عمل المركبات مما يقلل من استهلاك الوقود.</p>
+<p class="numbered">2- استخدام الموارد الطبيعية:</p>
+<p>تعتمد المؤسسة بشكل أساسي على موارد محدودة مثل الكهرباء والإنترنت، ولا تستخدم مواد خام أو موارد طبيعية بشكل كبير.</p>
+<p class="subhead">كما تحرص على :</p>
+<p>تقليل استخدام الورق والاعتماد على التقارير الإلكترونية.</p>
+<p>الاستخدام الأمثل للمعدات والأجهزة لتقليل الهدر.</p>
+<p class="numbered">3- استخدام الطاقة وإجراءات التوفير فيها:</p>
+<p class="subhead">تسعى المؤسسة إلى ترشيد استهلاك الطاقة من خلال:</p>
+<p>استخدام أجهزة موفرة للطاقة.</p>
+<p>إطفاء الأجهزة غير المستخدمة.</p>
+<p>الاعتماد على الإضاءة الموفرة (LED).</p>
+<p>إمكانية استخدام الطاقة الشمسية مستقبلًا لتقليل التكاليف وحماية البيئة</p>
+<p class="numbered">4- النفايات الناتجة عن المؤسسة واستراتيجيات التعامل معها:</p>
+<p class="subhead">تنتج عن المؤسسة نفايات محدودة نظرًا لطبيعة عملها الخدمية، وتشمل بشكل رئيسي:</p>
+<p>نفايات إلكترونية بسيطة (مثل قطع أجهزة تالفة)</p>
+<p>أوراق ومستندات</p>
+<p>عبوات بلاستيكية خفيفة</p>
+<p class="subhead">تتعامل المؤسسة مع هذه النفايات من خلال:</p>
+<p>تقليل استخدام الورق والاعتماد على الأنظمة الرقمية</p>
+<p>إعادة استخدام المواد قدر الإمكان</p>
+<p>فرز النفايات (ورق، بلاستيك، إلكترونيات)</p>
+<p>التخلص من النفايات الإلكترونية بطرق آمنة عبر جهات مختصة</p>
+<p>الحفاظ على نظافة مكان العمل بشكل مستمر</p>
+<p class="numbered">5- تأثير المؤسسة على البيئة (الضوضاء، الغازات، وغيرها)</p>
+<p>يُعتبر تأثير المؤسسة على البيئة منخفضًا جدًا، وذلك بسبب طبيعة عملها التي لا تعتمد على عمليات صناعية.</p>
+<p>الضوضاء:
+مستوى الضوضاء منخفض ويقتصر على أصوات الأجهزة والعمل المكتبي، ولا يسبب إزعاجًا للمحيط.</p>
+<p>الغازات والانبعاثات:
+لا تنتج المؤسسة انبعاثات مباشرة، بل تساهم بشكل إيجابي في تقليل التلوث من خلال تحسين أداء السيارات وتقليل الأعطال.</p>
+<p>تأثير عام:
+تسعى المؤسسة إلى العمل بطريقة صديقة للبيئة من خلال تقليل النفايات، ترشيد الطاقة، واستخدام التكنولوجيا بدل العمليات التقليدية</p>
+<div class="table-wrap"><table>
+<tr><th>خدمات ما بعد البيع</th><th>المواصفات (مثل النوع، طريقة التقديم)</th><th>اسم السلعة/الخدمة</th></tr>
+<tr><td>دعم فني بعد الفحص، شرح النتائج للعميل</td><td>فحص إلكتروني باستخدام أجهزة OBD2، تقارير رقمية مفصلة، دقة عالية</td><td>فحص أعطال السيارات</td></tr>
+<tr><td>متابعة حالة السيارة عند الحاجة</td><td>عرض مباشر لبيانات السيارة مثل السرعة، الحرارة، استهلاك الوقود</td><td>قراءة بيانات السيارة (Live Data)</td></tr>
+<tr><td>استشارة مجانية بعد استلام التقرير</td><td>تقرير واضح يحتوي على شرح الأعطال وأسبابها</td><td>تقرير تشخيص الأعطال</td></tr>
+<tr><td>متابعة مع العميل للتأكد من حل المشكلة</td><td>تقديم خطوات ونصائح لإصلاح المشكلة بشكل مبسط</td><td>إرشادات إصلاح الأعطال</td></tr>
+<tr><td>دعم مستمر والإجابة على استفسارات العميل</td><td>خدمة استشارة مباشرة (وجاهي أو أونلاين)</td><td>استشارة فنية للسيارات</td></tr>
+</table></div>
+</section>
+<section class="section-card" id="sec5" style="--delay:5">
+<h2>خطّة التسويق – السعر (Price)</h2>
+<p class="subhead">خطّة التسويق – السعر (Price)</p>
+<div class="table-wrap"><table>
+<tr><th>هامش التخفيضات (%)</th><th>أسباب تحديد سعري</th><th>سعري</th><th>سعر المنافسين (الأعلى / الأوسط / الأدنى)</th><th>السعر المقبول من الزبائن (الأعلى / الأوسط / الأدنى)</th><th>اسم السلعة/الخدمة</th></tr>
+<tr><td>10%</td><td>سعر متوسط لجذب الزبائن مع جودة عالية</td><td>60 شيكل</td><td>100 / 70 / 50 شيكل</td><td>80 / 60 / 40 شيكل</td><td>فحص أعطال السيارات</td></tr>
+<tr><td>10%</td><td>منافس وأقل قليلًا لجذب العملاء</td><td>50 شيكل</td><td>80 / 60 / 40 شيكل</td><td>70 / 50 / 30 شيكل</td><td>قراءة بيانات السيارة</td></tr>
+<tr><td>15%</td><td>سعر مناسب مقابل خدمة واضحة ومفيدة</td><td>40 شيكل</td><td>70 / 50 / 30 شيكل</td><td>60 / 40 / 20 شيكل</td><td>تقرير تشخيص الأعطال</td></tr>
+<tr><td>15%</td><td>خدمة بسيطة بسعر منخفض لجذب الزبائن</td><td>30 شيكل</td><td>60 / 40 / 25 شيكل</td><td>50 / 30 / 20 شيكل</td><td>إرشادات إصلاح الأعطال</td></tr>
+<tr><td>20%</td><td>سعر منخفض لزيادة الطلب</td><td>25 شيكل</td><td>50 / 30 / 20 شيكل</td><td>40 / 25 / 15 شيكل</td><td>استشارة فنية</td></tr>
+</table></div>
+</section>
+<section class="section-card" id="sec6" style="--delay:6">
+<h2>خطّة التسويق – المكان (Place)</h2>
+<p class="subhead">خطّة التسويق – المكان (Place)</p>
+<p class="subhead">وصف الموقع المقترح للمؤسسة:</p>
+<p>سيتم إنشاء المؤسسة في موقع حيوي داخل مدينة رام الله أو سلفيت، ويفضل أن يكون قريبًا من الشوارع الرئيسية أو مناطق تجمع ورش تصليح السيارات.</p>
+<p>كما سيتوفر للمؤسسة موقع إلكتروني يتيح للزبائن حجز الخدمات والاستفادة من الاستشارات عن بُعد، مما يوسّع نطاق الوصول خارج الموقع الجغرافي.</p>
+<p class="subhead">سبب اختيار هذا الموقع:</p>
+<p>قربه من الزبائن المستهدفين (أصحاب السيارات)</p>
+<p>وجود عدد كبير من ورش السيارات في المنطقة</p>
+<p>سهولة الوصول إليه من مختلف المناطق</p>
+<p>زيادة فرص جذب الزبائن بشكل مباشر</p>
+<p>دعم العمل الميداني والعمل الإلكتروني معًا</p>
+<p class="subhead">سيتم الوصول إلى الزبائن عن طريق البيع إلى:</p>
+<p class="bullet">☑ الأفراد
+☐ البائعين بالتجزئة
+☐ البائعين بالجملة
+☑ غيرهم (ورش تصليح السيارات والشركات)</p>
+<p class="subhead">سبب اختيار هذا النوع من التوزيع:</p>
+<p>تم اختيار البيع المباشر للأفراد لأنه يمثل الفئة الأكبر من الزبائن، كما أن التعامل مع ورش تصليح السيارات والشركات يساعد على توسيع نطاق العمل وزيادة عدد العملاء.</p>
+<p class="subhead">هذا النوع من التوزيع يضمن:</p>
+<p>بناء علاقة مباشرة مع الزبائن</p>
+<p>فهم احتياجاتهم بشكل أفضل</p>
+<p>تحقيق ثقة أعلى</p>
+<p>زيادة الانتشار من خلال التوصيات والتعامل المستمر</p>
+<p class="subhead">وصف الخطوات المخطّط لها لإبلاغ الزبائن عن افتتاح المؤسسة الجديدة:</p>
+<p>وسائل التواصل الاجتماعي:
+إنشاء صفحات على فيسبوك وإنستغرام لنشر خدمات المؤسسة، وعرض فيديوهات توضيحية عن فحص السيارات، مع إعلانات ممولة للوصول إلى أكبر عدد من الأشخاص.</p>
+<p>الموقع الإلكتروني:
+إطلاق موقع إلكتروني يحتوي على معلومات الخدمات، مع إمكانية حجز موعد أو طلب استشارة أونلاين.</p>
+<p>المطبوعات (نشرات وبروشورات):
+توزيع منشورات تعريفية في الشوارع، ومحطات الوقود، وورش تصليح السيارات.</p>
+<p>الملصقات (Posters):
+وضع ملصقات في أماكن تجمع السيارات لجذب الانتباه.</p>
+<p>التعاون مع ورش السيارات:
+الاتفاق مع ورش تصليح السيارات للترويج المتبادل وجلب زبائن جدد.</p>
+<p>حفل افتتاح:
+تنظيم افتتاح بسيط مع عروض وخصومات خاصة لجذب أول العملاء.</p>
+<p>عروض وخصومات:
+تقديم خصومات في أول شهر لجذب الزبائن وبناء قاعدة عملاء.</p>
+<p class="subhead">تكاليف الترويج المتوقعة:</p>
+<p>إعلانات وسائل التواصل الاجتماعي: حوالي 500 – 1000 شيكل شهريًا</p>
+<p>طباعة منشورات وبروشورات: حوالي 300 شيكل</p>
+<p>تصميم وطباعة ملصقات: حوالي 200 شيكل</p>
+<p>إنشاء موقع إلكتروني: حوالي 1000 – 1500 شيكل (مرة واحدة)</p>
+<p>حفل الافتتاح والعروض: حوالي 300 – 500 شيكل</p>
+</section>
+<section class="section-card" id="sec7" style="--delay:7">
+<h2>الشكل القانوني للمؤسسة (Legal Form)</h2>
+<p class="subhead">الشكل القانوني للمؤسسة (Legal Form)</p>
+<p>مؤسسة فردية</p>
+<p class="subhead">سبب اختيار هذا الشكل القانوني:</p>
+<p>سهولة التأسيس والإجراءات القانونية</p>
+<p>انخفاض التكاليف مقارنة بالشركات الأخرى</p>
+<p>سيطرة كاملة للمالك على اتخاذ القرارات</p>
+<p>مناسب للمشاريع الصغيرة في بدايتها</p>
+<p>إمكانية التوسع لاحقًا وتحويلها إلى شركة</p>
+</section>
+<section class="section-card" id="sec8" style="--delay:0">
+<h2>طاقم العمل (Organization and Staff)</h2>
+<p class="subhead">طاقم العمل (Organization and Staff)</p>
+<p class="subhead">أولا: طاقم العمل المطلوب</p>
+<div class="table-wrap"><table>
+<tr><th>الوظيفة</th><th>المهمات والواجبات الرئيسية</th><th>المؤهلات</th></tr>
+<tr><td>1 مدير المشروع</td><td>إدارة العمل، اتخاذ القرارات، متابعة الأداء</td><td>خبرة إدارية + معرفة تقنية</td></tr>
+<tr><td>فني فحص سيارات</td><td>فحص الأعطال باستخدام الأجهزة، إعداد التقارير</td><td>خبرة في ميكانيك السيارات + OBD2</td></tr>
+<tr><td>مطور/مشغل نظام</td><td>تشغيل الموقع الإلكتروني وصيانته</td><td>خبرة برمجة (JavaScript / Python)</td></tr>
+<tr><td>خدمة عملاء</td><td>استقبال الزبائن، الرد على الاستفسارات</td><td>مهارات تواصل جيدة</td></tr>
+<tr><td>مسوّق إلكتروني</td><td>إدارة الإعلانات والترويج على السوشيال ميديا</td><td>خبرة تسويق رقمي</td></tr>
+<tr><td>مساعد إداري</td><td>تنظيم المواعيد والملفات</td><td>مهارات تنظيم واستخدام الحاسوب</td></tr>
+</table></div>
+<p class="subhead">ثانيا: تكاليف طاقم العمل (الشهرية):</p>
+<div class="table-wrap"><table>
+<tr><th>لوظيفة</th><th>الراتب (شيكل)</th></tr>
+<tr><td>مدير المشروع</td><td>2000</td></tr>
+<tr><td>فني فحص سيارات</td><td>1800</td></tr>
+<tr><td>مطور/مشغل نظام</td><td>1500</td></tr>
+<tr><td>خدمة عملاء</td><td>1200</td></tr>
+<tr><td>مسوّق إلكتروني</td><td>1000</td></tr>
+<tr><td>مساعد إداري</td><td>1000</td></tr>
+<tr><td>المجموع</td><td>8500 شيكل</td></tr>
+</table></div>
+<p class="subhead">ثانيا: تكاليف طاقم العمل (الشهرية)</p>
+<div class="table-wrap"><table>
+<tr><th>الوظيفة</th><th>الراتب الشهري (شيكل)</th><th>الضمان الاجتماعي (تقريبًا 10%)</th><th>المنافع الأخرى</th><th>المجموع</th></tr>
+<tr><td>1- مدير المشروع</td><td>2000</td><td>200</td><td>100</td><td>2300</td></tr>
+<tr><td>2- فني فحص سيارات</td><td>1800</td><td>180</td><td>100</td><td>2080</td></tr>
+<tr><td>3- مطور/مشغل نظام</td><td>1500</td><td>150</td><td>100</td><td>1750</td></tr>
+<tr><td>4- خدمة عملاء</td><td>1200</td><td>120</td><td>80</td><td>1400</td></tr>
+<tr><td>5- مسوّق إلكتروني</td><td>1000</td><td>100</td><td>80</td><td>1180</td></tr>
+<tr><td>6- مساعد إداري</td><td>1000</td><td>100</td><td>80</td><td>1180</td></tr>
+<tr><td>المجموع</td><td>8500</td><td>850</td><td>540</td><td>9890 شيكل</td></tr>
+</table></div>
+<p class="subhead">ثالثا: الهيكل التنظيمي للمؤسسة</p>
+<p>يتكون الهيكل التنظيمي للمؤسسة من إدارة مركزية يشرف عليها مدير المشروع، حيث يتفرع منها باقي الأقسام بشكل بسيط يناسب حجم المشروع.</p>
+<p class="subhead">الهيكل كالتالي:</p>
+<p>مدير المشروع
+↓</p>
+<p>فني فحص السيارات</p>
+<p>مطور/مشغل النظام</p>
+<p>مسوّق إلكتروني</p>
+<p>خدمة عملاء</p>
+<p>مساعد إداري</p>
+<p class="subhead">وصف الهيكل :</p>
+<p>يعتمد الهيكل التنظيمي على البساطة والمرونة، حيث يكون مدير المشروع مسؤولًا عن الإشراف العام واتخاذ القرارات، بينما يعمل باقي الفريق بشكل متكامل لتقديم الخدمة بأفضل جودة.</p>
+</section>
+<section class="section-card" id="sec9" style="--delay:1">
+<h2>رأسمال البدء (Start-up Capital)</h2>
+<p class="subhead">رأسمال البدء (Start-up Capital)</p>
+<p class="numbered">1. العناصر الاستثمارية</p>
+<div class="table-wrap"><table>
+<tr><th>العناصر الاستثمارية</th><th>المبلغ (شيكل)</th></tr>
+<tr><td>أ- الأرض</td><td>0 (استئجار وليس شراء)</td></tr>
+<tr><td>ب- المباني</td><td>0</td></tr>
+<tr><td>ج- الآلات والمعدات</td><td>3000</td></tr>
+<tr><td>د- الأدوات والعدد</td><td>1000</td></tr>
+<tr><td>هـ- النقل أو المركبات</td><td>0</td></tr>
+<tr><td>و- الأثاث</td><td>1500</td></tr>
+<tr><td>ز- الأجهزة المكتبية</td><td>2000</td></tr>
+<tr><td>المجموع</td><td>7500 شيكل</td></tr>
+</table></div>
+<p class="subhead">قائمة الآلات والمعدات:</p>
+<p>جهاز فحص سيارات OBD2: 1500 شيكل</p>
+<p>جهاز كمبيوتر مخصص للفحص: 1500 شيكل</p>
+<p class="subhead">قائمة الأدوات والعدد:</p>
+<p>كابلات توصيل: 200 شيكل</p>
+<p>أدوات صيانة بسيطة: 300 شيكل</p>
+<p>ملحقات إلكترونية: 500 شيكل</p>
+<p class="subhead">قائمة الأثاث:</p>
+<p>مكتب: 500 شيكل</p>
+<p>كراسي: 400 شيكل</p>
+<p>رفوف: 600 شيكل</p>
+<p class="subhead">قائمة الأجهزة المكتبية:</p>
+<p>لابتوب: 1500 شيكل</p>
+<p>طابعة: 500 شيكل</p>
+<div class="table-wrap"><table>
+<tr><th>البند</th><th>المبلغ الشهري (شيكل)</th></tr>
+<tr><td>رواتب الموظفين</td><td>8500</td></tr>
+<tr><td>إيجار المحل</td><td>1000</td></tr>
+<tr><td>كهرباء وإنترنت</td><td>300</td></tr>
+<tr><td>تسويق وإعلانات</td><td>500</td></tr>
+<tr><td>مصاريف أخرى</td><td>200</td></tr>
+<tr><td>المجموع الشهري</td><td>10500 شيكل</td></tr>
+</table></div>
+<p>رأس المال العامل</p>
+<p>عدد الأشهر المتوقعة قبل تحقيق دخل:
+3 أشهر</p>
+<p>مجموع رأس المال العامل:
+10500 × 3 = 31500 شيكل</p>
+<p>تقدير رأسمال البدء</p>
+<div class="table-wrap"><table>
+<tr><th>العناصر</th><th>المبلغ</th></tr>
+<tr><td>مجموع تكاليف شراء العناصر الاستثمارية</td><td>7500</td></tr>
+<tr><td>مجموع رأس المال العامل</td><td>31500</td></tr>
+<tr><td>رأسمال البدء (الإجمالي)</td><td>39000 شيكل</td></tr>
+</table></div>
+</section>
+<section class="section-card" id="sec10" style="--delay:2">
+<h2>مصادر رأسمال البدء</h2>
+<p class="subhead">مصادر رأسمال البدء</p>
+<p>مصادر التمويل</p>
+<div class="table-wrap"><table>
+<tr><th>النوع</th><th>المصدر</th><th>الشروط (الفترة / الفائدة)</th><th>المبلغ (شيكل)</th></tr>
+<tr><td>أسهم رأس المال</td><td>المُدخرات الشخصية</td><td>بدون فائدة</td><td>5000</td></tr>
+<tr><td>أسهم رأس المال</td><td>شريك (1)</td><td>لا يوجد</td><td>0</td></tr>
+<tr><td>أسهم رأس المال</td><td>شريك (2)</td><td>لا يوجد</td><td>0</td></tr>
+<tr><td>القرض (1)</td><td>☑ قرض من العائلة</td><td>فترة سداد 12 شهر / بدون فائدة</td><td>4000</td></tr>
+<tr><td>القرض (1)</td><td>☐ قرض من الأصدقاء</td><td>—</td><td>0</td></tr>
+<tr><td>القرض (1)</td><td>☐ مقرضو الأموال</td><td>—</td><td>0</td></tr>
+<tr><td>القرض (2)</td><td>☐ جمعيات الإقراض</td><td>—</td><td>0</td></tr>
+<tr><td>القرض (2)</td><td>☐ برنامج إقراض حكومي</td><td>—</td><td>0</td></tr>
+<tr><td>القرض (2)</td><td>☑ قرض من المصرف</td><td>فترة 24 شهر / فائدة 5%</td><td>30000</td></tr>
+<tr><td>مجموع التمويل</td><td></td><td></td><td>39000 شيكل</td></tr>
+</table></div>
+</section>
+<section class="section-card" id="sec11" style="--delay:3">
+<h2>معلومات عن مصادر التمويل</h2>
+<p class="subhead">معلومات عن مصادر التمويل</p>
+<p class="subhead">القرض (1)</p>
+<p>اسم وعنوان الدائن، أو المؤسسة الدائنة:
+أحد أفراد العائلة – سلفيت</p>
+<p>الاتفاق بشأن القرض:
+☑ تم وضعه بشكله النهائي
+☑ المال متوفر بتاريخ: 01 / 01 / 2026 (عند بدء المشروع)</p>
+<p class="subhead">القرض (2)</p>
+<p>اسم وعنوان الدائن، أو المؤسسة الدائنة:
+بنك محلي (مثل بنك فلسطين – رام الله)</p>
+<p>الاتفاق بشأن القرض:
+☑ قيد المناقشة
+☐ تم وضعه بشكله النهائي
+☐ المال متوفر بتاريخ: 01 / 01 / 2026</p>
+<p class="subhead">القرض (2) – القرض البنكي</p>
+<p>قيمة القرض: 30000 شيكل</p>
+<p>مدة القرض: 2 سنة (24 شهر)</p>
+<p>معدل الفائدة: 5% سنوي</p>
+<div class="table-wrap"><table>
+<tr><th>رقم القسط</th><th>الشهر</th><th>قيمة القسط</th><th>الفائدة/المرابحة</th><th>الرصيد المتبقي</th></tr>
+<tr><td>1</td><td>ك2</td><td>1320</td><td>125</td><td>28805</td></tr>
+<tr><td>2</td><td>شباط</td><td>1320</td><td>120</td><td>27605</td></tr>
+<tr><td>3</td><td>آذار</td><td>1320</td><td>115</td><td>26400</td></tr>
+<tr><td>4</td><td>نيسان</td><td>1320</td><td>110</td><td>25190</td></tr>
+<tr><td>5</td><td>أيار</td><td>1320</td><td>105</td><td>23975</td></tr>
+<tr><td>6</td><td>حزيران</td><td>1320</td><td>100</td><td>22755</td></tr>
+<tr><td>7</td><td>تموز</td><td>1320</td><td>95</td><td>21530</td></tr>
+<tr><td>8</td><td>آب</td><td>1320</td><td>90</td><td>20300</td></tr>
+<tr><td>9</td><td>أيلول</td><td>1320</td><td>85</td><td>19065</td></tr>
+<tr><td>10</td><td>ت1</td><td>1320</td><td>80</td><td>17825</td></tr>
+<tr><td>11</td><td>ت2</td><td>1320</td><td>75</td><td>16580</td></tr>
+<tr><td>12</td><td>ك1</td><td>1320</td><td>70</td><td>15330</td></tr>
+</table></div>
+<p>القسط الشهري (تقريبي): 1320 شيكل</p>
+<p class="subhead">المجموع السنوي:</p>
+<p>مجموع الأقساط: 15840 شيكل</p>
+<p class="subhead">القرض (1) – قرض العائلة</p>
+<p>قيمة القرض: 4000 شيكل</p>
+<p>مدة القرض: 1 سنة</p>
+<p>معدل الفائدة: 0%</p>
+<p>القسط الشهري: 333 شيكل</p>
+<div class="table-wrap"><table>
+<tr><th>رقم القسط</th><th>الشهر</th><th>قيمة القسط</th><th>الفائدة</th><th>الرصيد المتبقي</th></tr>
+<tr><td>1</td><td>ك2</td><td>333</td><td>0</td><td>3667</td></tr>
+<tr><td>2</td><td>شباط</td><td>333</td><td>0</td><td>3334</td></tr>
+<tr><td>3</td><td>آذار</td><td>333</td><td>0</td><td>3001</td></tr>
+<tr><td>4</td><td>نيسان</td><td>333</td><td>0</td><td>2668</td></tr>
+<tr><td>5</td><td>أيار</td><td>333</td><td>0</td><td>2335</td></tr>
+<tr><td>6</td><td>حزيران</td><td>333</td><td>0</td><td>2002</td></tr>
+<tr><td>7</td><td>تموز</td><td>333</td><td>0</td><td>1669</td></tr>
+<tr><td>8</td><td>آب</td><td>333</td><td>0</td><td>1336</td></tr>
+<tr><td>9</td><td>أيلول</td><td>333</td><td>0</td><td>1003</td></tr>
+<tr><td>10</td><td>ت1</td><td>333</td><td>0</td><td>670</td></tr>
+<tr><td>11</td><td>ت2</td><td>333</td><td>0</td><td>337</td></tr>
+<tr><td>12</td><td>ك1</td><td>337</td><td>0</td><td>0</td></tr>
+</table></div>
+<p class="subhead">المجموع السنوي:</p>
+<p>مجموع الأقساط: 4000 شيكل</p>
+</section>
+<section class="section-card" id="sec12" style="--delay:4">
+<h2>خدمة القروض (Debt Service) – الإجمالي الشهري:</h2>
+<p class="subhead">خدمة القروض (Debt Service) – الإجمالي الشهري:</p>
+<p class="subhead">القرض البنكي: 1320 شيكل</p>
+<p>قرض العائلة: 333 شيكل</p>
+<p>الإجمالي الشهري: ≈ 1650 شيكل</p>
+</section>
+<section class="section-card" id="sec13" style="--delay:5">
+<h2>التقدير الشهري للربح الصافي (Monthly Estimation of Net Profit)</h2>
+<p class="subhead">التقدير الشهري للربح الصافي (Monthly Estimation of Net Profit)</p>
+<p>بيان الأرباح والخسائر التقديرية (Estimated Profit and Loss)</p>
+<p class="subhead">افتراضات بسيطة:</p>
+<p>المبيعات الشهرية: 15000 شيكل</p>
+<p>تكلفة المواد (أجهزة/خدمة بسيطة): 2000</p>
+<p>العمالة المباشرة: 4000</p>
+<p>المصروفات العامة: 4500</p>
+<p>فوائد القروض: 500</p>
+<p>الاستهلاك: 300</p>
+<p>الضريبة: 10%</p>
+<div class="table-wrap"><table>
+<tr><th>الشهر</th><th>مجموع المبيعات</th><th>تكلفة المواد</th><th>العمالة</th><th>الربح الإجمالي</th><th>المصروفات العامة</th><th>فوائد القروض</th><th>الاستهلاك</th><th>الربح قبل الضريبة</th><th>الضريبة</th><th>الربح الصافي</th></tr>
+<tr><td>1</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>2</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>3</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>4</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>5</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>6</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>7</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>8</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>9</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>10</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>11</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+<tr><td>12</td><td>15000</td><td>2000</td><td>4000</td><td>9000</td><td>4500</td><td>500</td><td>300</td><td>3700</td><td>370</td><td>3330</td></tr>
+</table></div>
+<p class="subhead">الإجمالي السنوي:</p>
+<p>مجموع المبيعات: 180000 شيكل</p>
+<p>صافي الربح السنوي: ≈ 39960 شيكل</p>
+</section>
+<section class="section-card" id="sec14" style="--delay:6">
+<h2>خطّة التدفّق النقدي الشهري (Monthly Cash Flow Plan)</h2>
+<p class="subhead">خطّة التدفّق النقدي الشهري (Monthly Cash Flow Plan)</p>
+<p class="subhead">افتراضات:</p>
+<p>المبيعات الشهرية: 15000 شيكل</p>
+<p>المصروفات العامة: 4500</p>
+<p>فوائد القروض: 500</p>
+<p>نفقات أخرى: 500</p>
+<p>الاستثمار الأولي يُدفع قبل التشغيل</p>
+<p class="subhead">قبل التشغيل:</p>
+<div class="table-wrap"><table>
+<tr><th>الشهر</th><th>النقد بداية الشهر</th><th>النقد الداخل</th><th>النقد الخارج</th><th>الفائض/العجز</th><th>النقد نهاية الشهر</th></tr>
+<tr><td>قبل التشغيل</td><td>0</td><td>39000 (رأس المال)</td><td>7500 (معدات)</td><td>+31500</td><td>31500</td></tr>
+</table></div>
+<p class="subhead">بعد التشغيل (شهريًا):</p>
+<div class="table-wrap"><table>
+<tr><th>الشهر</th><th>النقد بداية الشهر</th><th>الداخل (مبيعات)</th><th>الخارج (مصاريف)</th><th>الفائض</th><th>النقد نهاية الشهر</th></tr>
+<tr><td>1</td><td>31500</td><td>15000</td><td>5500</td><td>+9500</td><td>41000</td></tr>
+<tr><td>2</td><td>41000</td><td>15000</td><td>5500</td><td>+9500</td><td>50500</td></tr>
+<tr><td>3</td><td>50500</td><td>15000</td><td>5500</td><td>+9500</td><td>60000</td></tr>
+<tr><td>4</td><td>60000</td><td>15000</td><td>5500</td><td>+9500</td><td>69500</td></tr>
+<tr><td>5</td><td>69500</td><td>15000</td><td>5500</td><td>+9500</td><td>79000</td></tr>
+<tr><td>6</td><td>79000</td><td>15000</td><td>5500</td><td>+9500</td><td>88500</td></tr>
+<tr><td>7</td><td>88500</td><td>15000</td><td>5500</td><td>+9500</td><td>98000</td></tr>
+<tr><td>8</td><td>98000</td><td>15000</td><td>5500</td><td>+9500</td><td>107500</td></tr>
+<tr><td>9</td><td>107500</td><td>15000</td><td>5500</td><td>+9500</td><td>117000</td></tr>
+<tr><td>10</td><td>117000</td><td>15000</td><td>5500</td><td>+9500</td><td>126500</td></tr>
+<tr><td>11</td><td>126500</td><td>15000</td><td>5500</td><td>+9500</td><td>136000</td></tr>
+<tr><td>12</td><td>136000</td><td>15000</td><td>5500</td><td>+9500</td><td>145500</td></tr>
+</table></div>
+</section>
+<section class="section-card" id="sec15" style="--delay:7">
+<h2>الميزانية العمومية التقديرية (Estimated Balance Sheet)</h2>
+<p class="subhead">الميزانية العمومية التقديرية (Estimated Balance Sheet)</p>
+<p>بتاريخ: 31 / 12 / 2026</p>
+<div class="table-wrap"><table>
+<tr><th>البند</th><th>المبلغ (شيكل)</th></tr>
+<tr><td>النقد</td><td>145500</td></tr>
+<tr><td>ديون للمؤسسة على الآخرين</td><td>2000</td></tr>
+<tr><td>المخزون</td><td>1500</td></tr>
+<tr><td>مجموع الموجودات المتداولة</td><td>149000</td></tr>
+</table></div>
+<p class="subhead">صافي الموجودات الثابتة</p>
+<div class="table-wrap"><table>
+<tr><th>البند</th><th>المبلغ (شيكل)</th></tr>
+<tr><td>الأراضي</td><td>0</td></tr>
+<tr><td>المباني</td><td>0</td></tr>
+<tr><td>المعدات والآلات</td><td>3000</td></tr>
+<tr><td>الأجهزة المكتبية</td><td>2000</td></tr>
+<tr><td>الأثاث والديكور</td><td>1500</td></tr>
+<tr><td>المركبات والسيارات</td><td>0</td></tr>
+<tr><td>أخرى</td><td>0</td></tr>
+<tr><td>مجموع الموجودات الثابتة</td><td>6500</td></tr>
+</table></div>
+<p class="subhead">مجموع الموجودات:</p>
+<p>155500 شيكل</p>
+<p class="subhead">المطلوبات وحقوق الملكية</p>
+<p class="subhead">المطلوبات المتداولة</p>
+<div class="table-wrap"><table>
+<tr><th>البند</th><th>المبلغ</th></tr>
+<tr><td>ديون على المؤسسة</td><td>2000</td></tr>
+<tr><td>ضرائب مستحقة غير مدفوعة</td><td>1000</td></tr>
+<tr><td>مدفوعات أخرى مستحقة</td><td>500</td></tr>
+<tr><td>المجموع</td><td>3500</td></tr>
+</table></div>
+<p class="subhead">المطلوبات طويلة الأجل</p>
+<div class="table-wrap"><table>
+<tr><th>البند</th><th>المبلغ</th></tr>
+<tr><td>رصيد القرض العائلي</td><td>0 (تم سداده خلال السنة)</td></tr>
+<tr><td>رصيد القرض المصرفي</td><td>15000</td></tr>
+<tr><td>قروض أخرى</td><td>0</td></tr>
+<tr><td>المجموع</td><td>15000</td></tr>
+</table></div>
+<p class="subhead">حقوق الملكية</p>
+<div class="table-wrap"><table>
+<tr><th>البند</th><th>المبلغ</th></tr>
+<tr><td>مساهمة المالك</td><td>5000</td></tr>
+<tr><td>أرباح معاد استثمارها</td><td>132000</td></tr>
+<tr><td>المجموع</td><td>137000</td></tr>
+</table></div>
+</section>
+</main>
+</div>
+<button class="top-btn" id="topBtn" type="button" aria-label="الرجوع للأعلى">↑ للأعلى</button>
+<script>
+const contentArea = document.querySelector('.content');
+const topBtn = document.getElementById('topBtn');
+const pageRadios = document.querySelectorAll('.page-radio');
+
+function updateTopButton(){
+  if(!contentArea || !topBtn) return;
+  topBtn.classList.toggle('show', contentArea.scrollTop > 180);
+}
+
+if(contentArea && topBtn){
+  contentArea.addEventListener('scroll', updateTopButton);
+  topBtn.addEventListener('click', () => {
+    contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+pageRadios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    if(radio.checked && contentArea){
+      contentArea.scrollTo({ top: 0, behavior: 'smooth' });
+      requestAnimationFrame(updateTopButton);
+    }
+  });
+});
+</script>
+</body>
+</html>
